@@ -1,0 +1,233 @@
+/* Modern Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f5f7fb;
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header Styles */
+.header {
+    background: white;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    color: #2d3748;
+    font-weight: 600;
+}
+
+/* Upload Section Styles */
+#uploadSection {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    margin-bottom: 2rem;
+}
+
+#uploadSection h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.upload-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#fileInput {
+    flex: 1;
+    padding: 0.5rem;
+    border: 2px dashed #e2e8f0;
+    border-radius: 8px;
+    background: #f8fafc;
+    cursor: pointer;
+}
+
+#fileInput:hover {
+    border-color: #4299e1;
+}
+
+/* Progress Bar Styles */
+.upload-progress {
+    margin-top: 1rem;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #edf2f7;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4299e1, #667eea);
+    transition: width 0.3s ease;
+}
+
+#upload-status {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #718096;
+}
+
+/* Chat Section Styles */
+.chat-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.chat-main {
+    flex: 2;
+}
+
+#chatbox {
+    background: white;
+    border-radius: 12px;
+    height: 500px;
+    padding: 1.5rem;
+    overflow-y: auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    margin-bottom: 1rem;
+}
+
+.message {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    max-width: 80%;
+}
+
+.user-message {
+    background: #ebf8ff;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+
+.bot-message {
+    background: #f7fafc;
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+}
+
+.message strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+    font-size: 0.875rem;
+}
+
+.input-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#userInput {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+#userInput:focus {
+    outline: none;
+    border-color: #4299e1;
+}
+
+/* Button Styles */
+button {
+    padding: 0.75rem 1.5rem;
+    background: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #3182ce;
+}
+
+/* Documents Section Styles */
+#relevantDocs {
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+#relevantDocs h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.doc-item {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.2s;
+}
+
+.doc-item:hover {
+    transform: translateX(4px);
+}
+
+.doc-link {
+    color: #4299e1;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.doc-link small {
+    display: block;
+    color: #718096;
+    margin-top: 0.25rem;
+}
+
+.delete-btn {
+    background: #fc8181;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+}
+
+.delete-btn:hover {
+    background: #f56565;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chat-container {
+        flex-direction: column;
+    }
+}

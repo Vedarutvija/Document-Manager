@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Chatbot Demo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="/static/css/onedrive.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome, {{ session['user']['name'] }}</h1>
+    </header>
+
+    <div class="container">
+        <!-- Upload Section -->
+        <section id="uploadSection">
+            <h3>Upload Document</h3>
+            <div class="upload-controls">
+                <input type="file" id="fileInput" accept=".docx">
+                <button id="uploadButton" onclick="uploadFile()">
+                    Upload File
+                </button>
+            </div>
+            <div class="upload-progress" id="uploadProgress">
+                <div class="progress-bar">
+                    <div class="progress-bar-fill" id="progressBarFill"></div>
+                </div>
+                <div id="upload-status"></div>
+            </div>
+        </section>
+
+        <!-- Main Chat and Documents Container -->
+        <div class="chat-container">
+            <!-- Chat Section -->
+            <div class="chat-main">
+                <div id="chatbox"></div>
+                <div class="input-container">
+                    <input type="text" id="userInput" placeholder="Type your message...">
+                    <button id="sendButton">Send Message</button>
+                </div>
+            </div>
+
+            <!-- Relevant Documents Section -->
+            <aside id="relevantDocs">
+                <h3>Relevant Documents</h3>
+                <ul id="docList"></ul>
+            </aside>
+        </div>
+    </div>
+
+    <script src="/static/js/chatbot.js"></script>
+</body>
+</html>
